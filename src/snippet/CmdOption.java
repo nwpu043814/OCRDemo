@@ -1,9 +1,9 @@
 package snippet;
 
 import org.kohsuke.args4j.Option;
-import java.util.Random;
 
 public class CmdOption {
+	
 
 	@Option(name = "-x", usage = "The left in the cordinate")
 	public int x = 227;

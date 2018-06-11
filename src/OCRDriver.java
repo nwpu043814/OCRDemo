@@ -29,7 +29,7 @@ public class OCRDriver {
 			CmdLineParser parser = new CmdLineParser(option);
 			if (arg.length == 0) {
 				log.info("Usage:java -jar OCR.jar -x 0|-y 0|-w 55|-h 120");
-//				return;
+				return;
 			}
 			
 			try {
@@ -40,7 +40,7 @@ public class OCRDriver {
 				return;
 			}
 			
-//			Util.captureRect(RectangleBuilder.newBuilder().x(option.x).y(option.y).width(option.width).height(option.height).build());
+			Util.captureRect(RectangleBuilder.newBuilder().x(option.x).y(option.y).width(option.width).height(option.height).build());
 			BufferedImage img = ImageIO.read(new File("./out.png"));
 			String text = Util.doOCR(img);
 			System.out.print(Util.exchangeChar(text));
