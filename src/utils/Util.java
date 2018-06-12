@@ -20,9 +20,9 @@ import com.asprise.util.ocr.OCR;
 
 /*
  * Copyright (C) 2005-2010 TENCENT Inc.All Rights Reserved.
- * FileName£ºUtil.java
- * Description£º
- * History£º
+ * FileNameï¼šUtil.java
+ * Descriptionï¼š
+ * Historyï¼š
  * 1.0 Denverhan 2013-4-11 Create
  */
 
@@ -78,8 +78,8 @@ public class Util
 	
 	static BufferedImage doTwoValue(BufferedImage bi)
 	{
-		int h = bi.getHeight();// »ñÈ¡Í¼ÏñµÄ¸ß
-		int w = bi.getWidth();// »ñÈ¡Í¼ÏñµÄ¿í
+		int h = bi.getHeight();// è·å–å›¾åƒçš„é«˜
+		int w = bi.getWidth();// è·å–å›¾åƒçš„å®½
 		int[][] gray = new int[w][h];
 		int average = 0;
 		long total = 0;
@@ -146,7 +146,7 @@ public class Util
 	}
 
 	/**
-	 * »ñµÃµ±Ç°Ê±¼ä¡£
+	 * è·å¾—å½“å‰æ—¶é—´ã€‚
 	 * 
 	 * @return
 	 */
@@ -156,9 +156,9 @@ public class Util
 	}
 
 	/**
-	 * ½«Ãë±íÊ¾µÄÊ±¼ä×ª»»ÎªÈËÀà¿ÉÒÔ¶ÁÊ±¼ä
+	 * å°†ç§’è¡¨ç¤ºçš„æ—¶é—´è½¬æ¢ä¸ºäººç±»å¯ä»¥è¯»æ—¶é—´
 	 * 
-	 * @param sec µ¥Î»ÎªºÁÃë
+	 * @param sec å•ä½ä¸ºæ¯«ç§’
 	 * @return
 	 */
 	public static String seconds2Time(long sec)
@@ -216,17 +216,17 @@ public class Util
 		return (int) (top);
 	}
 
+
 	/**
-	 * ¶ÔÍ¼Æ¬½øĞĞ·Å´ó
+	 * å¯¹å›¾ç‰‡è¿›è¡Œæ”¾å¤§
 	 * 
-	 * @param originalImage Ô­Ê¼Í¼Æ¬
-	 * @param times ·Å´ó±¶Êı
+	 * @param originalImage åŸå§‹å›¾ç‰‡
+	 * @param times æ”¾å¤§å€æ•°
 	 * @return
 	 */
 	public static  BufferedImage zoomInImage(BufferedImage originalImage, float times)
 	{
 
-		// ¼ÓËÙ´¦Àí
 		if (!(times <= 0.9F || times >= 1.1))
 		{
 			return originalImage;
@@ -243,7 +243,7 @@ public class Util
 	}
 
 	/**
-	 * ³ıµô×Ö·û´®dotºóÃæµÄÄÚÈİ¡£
+	 * é™¤æ‰å­—ç¬¦ä¸²dotåé¢çš„å†…å®¹ã€‚
 	 * 
 	 * @param price
 	 * @return
