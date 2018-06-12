@@ -21,9 +21,9 @@ public class OCRDriver {
 	{
 		try {
 
-			//Ê¹ÓÃÄ¬ÈÏµÄÅäÖÃĞÅÏ¢£¬²»ĞèÒªĞ´log4j.properties
+			//ä½¿ç”¨é»˜è®¤çš„é…ç½®ä¿¡æ¯ï¼Œä¸éœ€è¦å†™log4j.properties
 		     BasicConfigurator.configure();
-		     //ÉèÖÃÈÕÖ¾Êä³ö¼¶±ğÎªinfo£¬Õâ½«¸²¸ÇÅäÖÃÎÄ¼şÖĞÉèÖÃµÄ¼¶±ğ
+		     //è®¾ç½®æ—¥å¿—è¾“å‡ºçº§åˆ«ä¸ºinfoï¼Œè¿™å°†è¦†ç›–é…ç½®æ–‡ä»¶ä¸­è®¾ç½®çš„çº§åˆ«
 		     log.setLevel(Level.INFO);			
 			CmdOption option = new CmdOption();
 			CmdLineParser parser = new CmdLineParser(option);
@@ -44,6 +44,7 @@ public class OCRDriver {
 			BufferedImage img = ImageIO.read(new File("./out.png"));
 			String text = Util.doOCR(img);
 			System.out.print(Util.exchangeChar(text));
+			System.out.flush();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
