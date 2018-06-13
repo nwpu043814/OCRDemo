@@ -66,11 +66,15 @@ public class Util
 
 	public static String doOCR(BufferedImage image )
 	{
+		if (image == null)
+			return "";
 		return doOCR(image, false);
 	}
 	
 	public static String doOCR(BufferedImage image , boolean doTwoValue)
 	{
+		if (image == null)
+			return "";
 		String text = null;
 		text = sOcr.recognizeCharacters(doTwoValue? doTwoValue(image):image);
 		return text;
@@ -112,19 +116,18 @@ public class Util
 		return nbi;
 	}
 	
-	public static  boolean  captureRect(Rectangle rect)
+	public static  BufferedImage  captureRect(Rectangle rect)
 	{
 		try
 		{
 			BufferedImage bi = sRobot.createScreenCapture(rect);
-			ImageIO.write(bi, "png", new File("./out.png"));
-			return true;
+			return bi;
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		return false;
+		return null;
 	}
 	
 	public static  String capture(Rectangle rect)

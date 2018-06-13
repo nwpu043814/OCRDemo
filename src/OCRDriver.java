@@ -40,8 +40,10 @@ public class OCRDriver {
 				return;
 			}
 			
-			Util.captureRect(RectangleBuilder.newBuilder().x(option.x).y(option.y).width(option.width).height(option.height).build());
-			BufferedImage img = ImageIO.read(new File("./out.png"));
+			BufferedImage img = Util.captureRect(RectangleBuilder.newBuilder().x(option.x).y(option.y).width(option.width).height(option.height).build());
+			if (option.debug) {
+				ImageIO.write(img, "jpg", new File("./out.jpg"));
+			}
 			String text = Util.doOCR(img);
 			System.out.print(Util.exchangeChar(text));
 			System.out.flush();

@@ -17,5 +17,6 @@ public class CmdOption {
 	@Option(name = "-h", usage = "The height of the capturing rectange")
 	public int height = 100;
 	
-	
+	@Option(name = "-debug", usage = "whether to save the image")
+	public boolean  debug = false;
 }
